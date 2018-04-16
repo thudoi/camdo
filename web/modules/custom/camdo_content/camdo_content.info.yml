@@ -1,0 +1,5 @@
+name: 'Cam do content'
+type: module
+description: 'Cam do content'
+core: 8.x
+package: 'Camdo'

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains camdo_content.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function camdo_content_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the camdo_content module.
+    case 'help.page.camdo_content':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Cam do content') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function camdo_content_theme() {
+  return [
+    'camdo_content' => [
+      'render element' => 'children',
+    ],
+  ];
+}
